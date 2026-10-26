@@ -14,12 +14,12 @@
         {
             name: 'Rajesh',
             role: 'Team Leader',
-            image: 'assets/images/rajesh-leader.jpeg'
+            image: 'rajesh-leader.jpeg'
         },
         {
             name: 'Shubham',
             role: 'Team Member',
-            image: 'assets/images/shubham-team-member.jpeg'
+            image: 'shubham-team-member.jpeg'
         }
 
         
