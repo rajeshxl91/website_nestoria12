@@ -1,0 +1,83 @@
+
+/* ===== Favorites Page ===== */
+
+/* Favorites Section */
+.fav-section {
+  padding-block: clamp(32px, 5vw, 56px) 0;
+}
+
+/* Favorites Summary */
+.fav-summary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 28px;
+  padding: 20px 26px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* Summary Statistics */
+.summary-stats {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: clamp(20px, 5vw, 56px);
+}
+
+.summary-stats strong {
+  display: block;
+  color: var(--primary);
+  font-size: 1.6rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.summary-stats span {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+/* Summary Button */
+.fav-summary .btn {
+  flex-shrink: 0;
+}
+
+/* Tablet & Mobile */
+@media (max-width: 560px) {
+  .fav-summary {
+    align-items: stretch;
+    padding: 20px;
+  }
+
+  .summary-stats {
+    gap: 20px 28px;
+  }
+
+  .fav-summary .btn {
+    width: 100%;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 360px) {
+  .fav-summary {
+    padding: 16px;
+  }
+
+  .summary-stats {
+    gap: 16px;
+  }
+
+  .summary-stats strong {
+    font-size: 1.4rem;
+  }
+
+  .summary-stats span {
+    font-size: 0.82rem;
+  }
+}

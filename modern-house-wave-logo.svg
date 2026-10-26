@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Nestoria house logo">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6548e8"/><stop offset="1" stop-color="#24166b"/></linearGradient></defs>
+  <rect width="128" height="128" rx="30" fill="url(#g)"/>
+  <path d="M20 62 64 27 108 62" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M32 57v43h64V57" fill="none" stroke="#fff" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M51 100V74h26v26" fill="none" stroke="#fff" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M18 111c12-6 24-6 36 0s24 6 36 0 14-5 20-2" fill="none" stroke="#c8bcff" stroke-width="5" stroke-linecap="round"/>
+</svg>

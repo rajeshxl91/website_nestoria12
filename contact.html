@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Contact Us | Nestoria</title>
+  <meta
+    name="description"
+    content="Get in touch with the Nestoria team about buying, renting, selling or managing a property."
+  >
+
+  <link
+    rel="icon"
+    href="assets/modern-house-wave-logo.svg"
+    type="image/svg+xml"
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="contact.css">
+
+  <script
+    src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"
+    defer
+  ></script>
+  <script src="properties-data.js"defer ></script>
+  <script src="main.js"defer ></script>
+  <script src="contact.js"defer ></script>
+</head>
+
+<body data-nav="contact">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div id="site-header"></div>
+
+  <main id="main" class="container">
+
+    <!-- Page Hero -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+          <li><a href="index.html">Home</a></li>
+          <li aria-current="page">Contact</li>
+        </ol>
+      </nav>
+
+      <h1 id="page-title">Let&rsquo;s Talk About Your Next Home</h1>
+      <p>
+        Send us a message and an advisor will reply within one business day.
+      </p>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="info-cards" aria-label="Contact information">
+
+      <article class="info-card">
+        <span class="info-icon">
+          <i data-lucide="phone"></i>
+        </span>
+        <h3>Call us</h3>
+        <a href="tel:+91912294077">+91 912294077</a>
+        <p>Contact us for property enquiries</p>
+      </article>
+
+      <article class="info-card">
+        <span class="info-icon">
+          <i data-lucide="mail"></i>
+        </span>
+        <h3>Email us</h3>
+        <a href="mailto:rajeshgond00322@gmail.com">
+          rajeshgond00322@gmail.com
+        </a>
+        <p>We reply as soon as possible</p>
+      </article>
+
+      <article class="info-card">
+        <span class="info-icon">
+          <i data-lucide="map-pin"></i>
+        </span>
+        <h3>Visit us</h3>
+        <p class="strong">Greater Noida</p>
+        <p>Uttar Pradesh, India</p>
+      </article>
+
+    </section>
+
+    <!-- Contact Form and Office Location -->
+    <section class="contact-layout" aria-labelledby="form-title">
+
+      <div class="form-card">
+        <h2 id="form-title">Send a message</h2>
+
+        <form id="contact-form" novalidate>
+          <div class="form-grid">
+
+            <div class="field">
+              <label for="c-name">Full name</label>
+              <input
+                id="c-name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                data-validate="required|min:2"
+                aria-describedby="c-name-error"
+              >
+              <p class="field-error" id="c-name-error"></p>
+            </div>
+
+            <div class="field">
+              <label for="c-email">Email</label>
+              <input
+                id="c-email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                data-validate="required|email"
+                aria-describedby="c-email-error"
+              >
+              <p class="field-error" id="c-email-error"></p>
+            </div>
+
+            <div class="field">
+              <label for="c-phone">Phone</label>
+              <input
+                id="c-phone"
+                name="phone"
+                type="tel"
+                autocomplete="tel"
+                data-validate="required|phone"
+                aria-describedby="c-phone-error"
+              >
+              <p class="field-error" id="c-phone-error"></p>
+            </div>
+
+            <div class="field">
+              <label for="c-subject">Subject</label>
+              <select
+                id="c-subject"
+                name="subject"
+                data-validate="required"
+                aria-describedby="c-subject-error"
+              >
+                <option value="">Select a topic</option>
+                <option>Buying a property</option>
+                <option>Renting a property</option>
+                <option>Selling a property</option>
+                <option>Property management</option>
+                <option>Something else</option>
+              </select>
+              <p class="field-error" id="c-subject-error"></p>
+            </div>
+
+            <div class="field full">
+              <label for="c-message">Message</label>
+              <textarea
+                id="c-message"
+                name="message"
+                rows="5"
+                data-validate="required|min:10"
+                aria-describedby="c-message-error"
+              ></textarea>
+              <p class="field-error" id="c-message-error"></p>
+            </div>
+
+          </div>
+
+          <button type="submit" class="btn btn-primary">
+            Send Message
+          </button>
+
+          <p
+            id="contact-status"
+            class="form-status"
+            role="status"
+            aria-live="polite"
+            hidden
+          ></p>
+        </form>
+      </div>
+
+      <!--Office Location Map -->
+      <aside class="map-card" aria-label="Office location">
+
+        <div
+          class="map-visual"
+          role="img"
+          aria-label="Stylized map showing the Nestoria office in Greater Noida"
+        >
+          <span class="map-road r1"></span>
+          <span class="map-road r2"></span>
+          <span class="map-road r3"></span>
+          <span class="map-road r4"></span>
+          <span class="map-park"></span>
+          <span class="map-water"></span>
+
+          <span class="map-pin">
+            <i data-lucide="map-pin"></i>
+          </span>
+        </div>
+
+        <div class="map-caption">
+          <strong>Nestoria Office</strong>
+          <p>Greater Noida, Uttar Pradesh, India</p>
+          <p class="map-note">
+            Illustrative map placeholder. An interactive map can be added later.
+          </p>
+        </div>
+
+      </aside>
+
+    </section>
+
+    <!-- Frequently Asked Questions -->
+    <section class="section" aria-labelledby="faq-title">
+      <div class="section-head center">
+        <h2 id="faq-title">Quick answers</h2>
+      </div>
+
+      <div class="faq-list">
+
+        <details class="faq-item">
+          <summary>How soon will someone reply?</summary>
+          <p>
+            Messages sent on business days are answered within one business day,
+            usually sooner.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can I book a viewing from here?</summary>
+          <p>
+            Yes. Mention the property name and your preferred times, or use
+            the visit form on any property page.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Do you work with out-of-town buyers?</summary>
+          <p>
+            We do. Our advisors can arrange video tours and handle paperwork
+            remotely.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Is there a fee to talk to an advisor?</summary>
+          <p>No. Your first consultation is always free.</p>
+        </details>
+
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+</body>
+</html>

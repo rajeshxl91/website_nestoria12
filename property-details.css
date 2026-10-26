@@ -1,0 +1,466 @@
+
+/* ========================================
+   PROPERTY DETAILS PAGE
+======================================== */
+
+/* Page Layout */
+.detail-main {
+  padding-top: 20px;
+}
+
+/* ========================================
+   BREADCRUMBS
+======================================== */
+
+.crumbs {
+  margin-bottom: 18px;
+}
+
+.crumb-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.crumb-list li + li::before {
+  content: "/";
+  margin-right: 8px;
+  opacity: 0.6;
+}
+
+.crumb-list a {
+  display: inline-block;
+  padding: 6px 0;
+}
+
+.crumb-list a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.crumb-list [aria-current] {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* ========================================
+   PROPERTY IMAGE GALLERY
+======================================== */
+
+.gallery-main {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.gallery-main img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-thumbs {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+
+  margin-top: 14px;
+}
+
+.gallery-thumbs button {
+  width: 100%;
+  padding: 0;
+
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+
+  background: var(--lavender);
+  border: 3px solid transparent;
+  border-radius: 16px;
+
+  opacity: 0.75;
+  cursor: pointer;
+
+  transition:
+    opacity 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.gallery-thumbs button:hover {
+  opacity: 1;
+}
+
+.gallery-thumbs button[aria-current="true"] {
+  border-color: var(--accent);
+  opacity: 1;
+}
+
+.gallery-thumbs img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ========================================
+   PROPERTY DETAIL LAYOUT
+======================================== */
+
+.detail-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 390px;
+  align-items: start;
+  gap: clamp(24px, 4vw, 48px);
+
+  margin-top: clamp(28px, 4vw, 44px);
+}
+
+.detail-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px 32px;
+}
+
+.detail-header h1 {
+  margin-top: 10px;
+  font-size: clamp(1.8rem, 1.2rem + 2.4vw, 2.8rem);
+}
+
+/* Property Status */
+.status-pill {
+  display: inline-block;
+  padding: 6px 16px;
+
+  background: var(--lavender);
+  border-radius: 999px;
+
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+/* Property Address */
+.detail-address {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 10px;
+  color: var(--muted);
+}
+
+.detail-address svg {
+  flex-shrink: 0;
+  color: var(--accent);
+}
+
+/* ========================================
+   PROPERTY PRICE
+======================================== */
+
+.detail-price-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.detail-price {
+  color: var(--primary);
+  font-size: clamp(1.7rem, 1.3rem + 1.6vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.detail-price span {
+  color: var(--muted);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Favorite Button */
+#detail-fav[aria-pressed="true"] {
+  color: #e0245e;
+  border-color: #e0245e;
+}
+
+#detail-fav[aria-pressed="true"] svg {
+  fill: currentColor;
+}
+
+/* ========================================
+   PROPERTY STATISTICS
+======================================== */
+
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+
+  margin-block: 28px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.stat-row li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 18px;
+
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.stat-row svg {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  color: var(--accent);
+}
+
+.stat-row strong {
+  display: block;
+  color: var(--primary);
+  font-size: 1.1rem;
+  line-height: 1.2;
+}
+
+.stat-row span {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+/* ========================================
+   PROPERTY INFORMATION
+======================================== */
+
+.detail-block {
+  margin-top: 36px;
+}
+
+.detail-block h2 {
+  margin-bottom: 14px;
+  font-size: 1.4rem;
+}
+
+.detail-block p {
+  max-width: 70ch;
+  color: var(--muted);
+}
+
+/* Property Highlights */
+.chip-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+
+  padding: 0;
+  list-style: none;
+}
+
+.chip-grid li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 12px 16px;
+
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+
+  font-weight: 500;
+}
+
+.chip-grid svg {
+  flex-shrink: 0;
+  color: var(--accent);
+}
+
+/* Feature List */
+.feature-list {
+  display: grid;
+  gap: 12px;
+
+  padding: 0;
+  list-style: none;
+}
+
+.feature-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.feature-list svg {
+  flex-shrink: 0;
+  color: #1f7a52;
+}
+
+/* ========================================
+   SIDEBAR & CONTACT CARD
+======================================== */
+
+.detail-sidebar {
+  position: sticky;
+  top: 96px;
+
+  display: grid;
+  gap: 20px;
+}
+
+.side-card {
+  padding: 24px;
+
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.side-title {
+  margin-bottom: 16px;
+  font-size: 1.15rem;
+}
+
+/* Agent Information */
+.agent-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  margin-bottom: 16px;
+}
+
+.agent-info img {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.agent-info strong {
+  display: block;
+  color: var(--primary);
+}
+
+.agent-info span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* Agent Contact Links */
+.agent-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  min-height: 44px;
+
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+.agent-link:hover {
+  color: var(--accent);
+}
+
+.agent-link svg {
+  flex-shrink: 0;
+  color: var(--accent);
+}
+
+/* Contact Form Grid */
+.form-grid.single {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+
+  margin-bottom: 18px;
+}
+
+/* ========================================
+   SIMILAR PROPERTIES
+======================================== */
+
+.similar {
+  margin-top: var(--section-gap);
+}
+
+/* ========================================
+   RESPONSIVE: TABLET
+======================================== */
+
+@media (max-width: 1023px) {
+  .detail-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .detail-sidebar {
+    position: static;
+  }
+}
+
+/* ========================================
+   RESPONSIVE: MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+  .stat-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .stat-row li {
+    gap: 10px;
+    padding: 14px;
+  }
+
+  .chip-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .gallery-thumbs {
+    gap: 8px;
+  }
+
+  .gallery-thumbs button {
+    border-radius: 10px;
+  }
+
+  .form-grid.single {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .side-card {
+    padding: 20px;
+  }
+}
+
+/* ========================================
+   ACCESSIBILITY
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery-thumbs button {
+    transition: none;
+  }
+}

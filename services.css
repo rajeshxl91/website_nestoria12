@@ -1,0 +1,189 @@
+
+/* ========================================
+   SERVICES PAGE
+======================================== */
+
+/* Services Grid */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* Service Card */
+.service-card {
+  padding: 30px;
+
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-light);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Service Icon */
+.service-icon {
+  display: grid;
+  place-items: center;
+
+  width: 58px;
+  height: 58px;
+  margin-bottom: 20px;
+
+  background: var(--lavender);
+  border-radius: 18px;
+
+  color: var(--accent);
+}
+
+.service-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+/* Service Content */
+.service-card h3 {
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  color: var(--muted);
+}
+
+/* ========================================
+   OUR PROCESS SECTION
+======================================== */
+
+.process {
+  padding: clamp(32px, 5vw, 64px)
+    clamp(20px, 4vw, 56px);
+
+  background: var(--primary);
+  border-radius: var(--radius-lg);
+}
+
+.process h2 {
+  color: #fff;
+}
+
+/* Process Steps Grid */
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+/* Individual Step */
+.process-steps li {
+  padding: 24px;
+
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius);
+
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.process-steps h3 {
+  margin: 14px 0 8px;
+
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+/* Step Number */
+.process-num {
+  display: grid;
+  place-items: center;
+
+  width: 40px;
+  height: 40px;
+
+  background: var(--accent);
+  border-radius: 50%;
+
+  color: #fff;
+  font-weight: 700;
+}
+
+/* ========================================
+   CALL TO ACTION
+======================================== */
+
+.cta-wrap {
+  margin-top: var(--section-gap);
+}
+
+.cta-banner {
+  --cta-image: url("https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80");
+}
+
+/* ========================================
+   RESPONSIVE: TABLET
+======================================== */
+
+@media (max-width: 1023px) {
+  .service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .process-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ========================================
+   RESPONSIVE: MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+  .service-grid,
+  .process-steps {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .service-grid {
+    gap: 18px;
+  }
+
+  .service-card {
+    padding: 24px;
+  }
+
+  .process-steps {
+    gap: 16px;
+  }
+
+  .process-steps li {
+    padding: 20px;
+  }
+}
+
+/* ========================================
+   ACCESSIBILITY
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .service-card {
+    transition: none;
+  }
+
+  .service-card:hover {
+    transform: none;
+  }
+}
